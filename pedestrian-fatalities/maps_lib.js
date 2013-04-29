@@ -43,10 +43,15 @@ var MapsLib = {
     $( "#result_count" ).html("");
 
     geocoder = new google.maps.Geocoder();
+    var mapTypeOptions = {
+        position : google.maps.ControlPosition.TOP_LEFT
+      };
     var myOptions = {
       zoom: MapsLib.defaultZoom,
       center: MapsLib.map_centroid,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      panControl: false,
+      mapTypeControlOptions: mapTypeOptions
     };
     map = new google.maps.Map($("#map_canvas")[0],myOptions);
 
