@@ -64,13 +64,13 @@ var MapsLib = {
     //reset filters
     $("#search_address").val(MapsLib.convertToPlainString($.address.parameter('address')));
     var loadRadius = MapsLib.convertToPlainString($.address.parameter('radius'));
-    if (loadRadius != "") $("#search_radius").val(loadRadius);
+    if (loadRadius !== "") { $("#search_radius").val(loadRadius); }
     else $("#search_radius").val(MapsLib.searchRadius);
     $(":checkbox").attr("checked", "checked");
     $("#result_count").hide();
-    
+
     //-----custom initializers-------
-    
+
       var minDate = moment("Jan 1 2007"); // Jan 1st 2010
       var maxDate = moment("Dec 31 2011"); //now
 
@@ -92,10 +92,10 @@ initializeDateSlider: function(minDate, maxDate, startDate, endDate, stepType, s
 
   $('#minDate').html(minDate.format('MMM YYYY'));
   $('#maxDate').html(maxDate.format('MMM YYYY'));
-  
+
   $('#startDate').html(startDate.format('L'));
   $('#endDate').html(endDate.format('L'));
-  
+
   $('#date-range').slider({
     range: true,
     step: step,

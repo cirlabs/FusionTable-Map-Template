@@ -1,8 +1,4 @@
 a { color: #4B58A6; }
-  
-#map_canvas img {
-  max-width: none;
-}
 
 .filter-box { 
   height: 15px; 
@@ -26,12 +22,55 @@ a { color: #4B58A6; }
 
 canvas {-ms-touch-action: double-tap-zoom;}
 
-.branding {
+.map-container {
+  position: relative ;
+  height : 400px;
+}
+
+#map_canvas {
+  height: 100%;
+}
+
+.map-container img {
+  max-width: 500px;
+}
+
+.map-container .branding {
   position: absolute;
-  bottom: 50px;
-  right: 25px;
-  width: 202px;
-  height: 52px;
+  top: 10px;
+  right: 10px;
+  width: 25%;
   z-index: 2;
-  display: none;
+}
+
+.search-bar {
+  margin: 20px 0;
+}
+
+.search-bar input {
+  margin-bottom: 0 ;
+}
+
+#search_address {
+  width : 50%;
+}
+
+#within {
+  position: relative;
+  display : inline-block;
+  top: 5px ;
+}
+
+#within label {
+  position: relative;
+  top : -3px;
+  display: inline-block;
+}
+
+.googft-info-window h3 {
+  font-size : 16px;
+}
+
+.sourcetext {
+  font-size : 12px;
 }
